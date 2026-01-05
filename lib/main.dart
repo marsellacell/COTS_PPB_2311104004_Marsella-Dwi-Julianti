@@ -1,18 +1,23 @@
-import 'package:cots/presetation/dashboard/dashboard_page.dart';
 import 'package:flutter/material.dart';
+import 'presentation/dashboard/dashboard_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'COTS PPB',
+      title: 'Task Manager',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        fontFamily: 'Roboto',
+        useMaterial3: true,
+      ),
       home: const DashboardPage(),
     );
   }
